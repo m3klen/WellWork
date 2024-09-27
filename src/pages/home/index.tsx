@@ -5,18 +5,18 @@ import { CLASS_NAME } from './const'
 import { type HomeProps } from './types'
 import { propTypes, defaultProps } from './props'
 
-import './style.scss'
+
+import './style.css'
+import * as C from '../../components'
 
 const Home: React.FC<HomeProps> = (props: HomeProps) => {
   const { className } = props
   const finalClassName = classNames(CLASS_NAME, className)
 
   return (
-    <div className={finalClassName}>
-      <div className={`${CLASS_NAME}-content-wrapper`}>
-        <h2>React TypeScript Web App Template</h2>
-      </div>
-    </div>
+    <>
+      <C.Header/>
+    </>
   )
 }
 
