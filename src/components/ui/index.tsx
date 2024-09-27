@@ -1,5 +1,6 @@
 import type React from 'react'
 import classNames from 'classnames'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import * as P from '../../pages'
 
@@ -7,7 +8,7 @@ import { CLASS_NAME } from './const'
 import { type UIProps } from './types'
 import { propTypes, defaultProps } from './props'
 
-import './style.scss'
+import './style.css'
 
 const UI: React.FC<UIProps> = (props: UIProps) => {
   const { className } = props
@@ -15,7 +16,7 @@ const UI: React.FC<UIProps> = (props: UIProps) => {
 
   return (
     <div className={finalClassName}>
-      <P.Home />
+      <P.Home></P.Home>
     </div>
   )
 }
