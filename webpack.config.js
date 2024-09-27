@@ -35,7 +35,10 @@ const config = {
     new CopyWebpackPlugin({
       patterns: [{ from: 'public' }]
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+  },
 }
 
 module.exports = config
